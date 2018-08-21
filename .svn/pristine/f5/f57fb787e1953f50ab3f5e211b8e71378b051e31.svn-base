@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>Hello APP</title>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script> -->
+    <!-- <script>less.watch();</script> -->
+    <style type="text/less">
+        label { margin: 10px; font-size: 24px; } ul { margin-bottom: 10px; } ul li { margin: 5px 10px; padding: 5px; color: #000; word-wrap: break-word; } /*.less{ background: pink; width: 200px; height: 200px; border: 1px solid red; }*/
+    </style>
+</head>
+<body>
+    <div class="api_jsdemo">
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+//trim() 去掉字符串收尾空格
+var aa = " aa s d f "
+$api.trim(aa)
+console.log(aa);
+</script>
+
+</html>

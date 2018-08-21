@@ -1,0 +1,155 @@
+API对象：
+  窗口类
+  openWin():打开windows显示在最前面
+  closeWin():关闭窗口
+  closeToWin():关闭到指定window，最上面显示的window到指定name的window之间的所有window都会呗关闭
+  setWinAttr():设置window属性
+  openFrame：打开frame显示到最前面
+  closeFrame：关闭frame
+  setFrameAttr：设置frame属性
+  bringFrametoFront：调整frame到前面
+  sendFrameToback：调整frame到后面
+  setFrameClient({params},callback(ret,err)):设置指定frame的页面加载监听，仅在window中调用生效，可以对多个frame进行监听
+  animation({params},callback(ret,err)):frame动画，支持平移、缩放、旋转和透明度变化 注：仅支持frame，不支持window及frameGroup里面的frame
+  openFrameGroup:打开frame组，若frame已经存在，则会把该frame组显示到最前面，frame组打开后，当前页面加载完成后，页面会预加载后面指定个数页面
+  closeFrameGroup():关闭frame组
+  setFrameGroupAttr:设置frame组属性
+  setFrameGroupIndex：设置frame组当前可见frame
+  openPopoverWin:打开弹出层窗口，只支持ipad
+  closePopoverWin:关闭整个弹出层，只ipad上面有效
+  openSlidLayout:打开侧滑式布局
+  openSlidPane:向左向右进行侧滑
+  closeSlidPane:关闭侧滑状态
+  lockSlidPane:锁住slidePane，使其不能更随手指滑动而移动
+  unlockSlidePane:解锁slidPane
+  openDrawerLayout:打开一个抽屉式侧滑window，可以从当前window的左右边缘滑动拉出侧滑window
+  openDrawerPane:打开抽屉式侧滑Pane
+  closeDranwerPane：关闭抽屉式侧滑
+  loadData:在指定window或者frame中加载html数据
+  execScript：在指定window或者frame中执行脚本
+  setBlurEffect:z在当前页面或应用设置模糊效果
+  pageUp({}):页面向上滚动一页
+  pageDown：页面向下滚动一页
+  removeLaunchView:移除启动图
+  showLaunchView:重新显示闪屏广告，若没有闪屏广告则不显示
+  parseTapmode:解析元素tapmode属性，优化点击事件处理
+
+  应用管理
+  installAPP:安装应用，如果是苹果APPStore应用地址，将会跳转到appstore应用详情页面
+  uninstallAPP:卸载应用
+  openAPP:打开手机上其他版本
+  appInstalled:判断设备上是否已经安装指定应用
+  rebootApp：重启应用，云修复完成后可以调用此方法重启应用使云修复生效
+  openWidget：打开widget
+  closeWidget:关闭指定widget
+
+  网络通信：
+  ajax异步请求，支持标准http协议，支持单向、双向认证请求，支持文件上传，支持缓存
+  cancelAjax:取消异步请求
+  download:下载文件
+  cancelDownload：取消下载文件
+  imageCache:图片缓存
+
+  数据存储
+  readFile:阅读文本文件内容，只支持utf-8编码文本类型文件
+  writeFile：写入内容到文本文件
+  setPrefs:设置偏好数据
+  clearCache:清除缓存
+  getCacheSize:获取缓存暂用空间大小
+  getTotalSpace：获取总存储空间大小
+  getFreeDiskSpace:获取剩余存储空间大小
+  loadSecureValue：从加密的key.xml文件获取指定的数据
+
+  消息事件
+  addEventListener：监听事件，支持系统事件和自定义事件
+  reomveEventListener:移除监听事件
+  sendEvent:将任意一个自动以事件广播出去，该事件可在任意页面通过addEventListner监听收到
+  notification：向用户发乎震动，剩余提示，灯光闪烁等提示ixngwei1
+  cancelNotification:清除本应用弹出到状态栏的某个通知或者所有通知
+
+  设备访问
+  startLocation:调用系统自带定位功能，开始定位
+  stopLoaction:停止定位
+  getLoaction:=获取位置信息，获取成功后自动停止获取
+  startSensor：开启传感器
+  stopSensor：停止传感器
+  call：拨打电话或进行faceTiem
+  sms:调用系统短信页面进行发送短信，
+  mail:发邮箱
+  openContacts:在应用内打开系统通讯录里面选择联系人
+  setFullScreen:是否设置全屏
+  setKeepScreenOn：设置是否禁止屏幕休眠
+  toLauncher:回到系统桌面
+  setScreenSecure:设置是否禁止截屏
+  getPhoneNumbei:获取本机号码
+
+  UI组件
+  alert：弹出带一个按钮的对话框，更多按钮的对话框用confirm方法
+  confirm:弹出带2、3个按钮的对话框
+  prompt:弹出对话框
+  actionSheet:底部弹出框
+  showProgress:显示进度提示框
+  hideProgress:隐藏进度提示框
+  toast：弹出一个定时自动关闭的提示框
+  openPicker：打开时间选择器
+  refreshHeaderLoading：设置下拉刷新组件为刷新中状态
+  showFloatBox:展示一个悬浮框，浮动在屏幕是
+
+  多媒体
+  getPicture:通过点用系统默认相机或图库应用，获取图片
+  saveMediaToAlubum:保存图片和视频到系统相册
+  startRecord:录制amr格式音频
+  stopRecord:停止录音
+  startPlay:播放本地音频
+  stopPlay:停止播放音频
+  openVideo:打开系统视频播放器
+
+  模块加载
+  require
+
+  Webapp历史
+  historyForward：当前window或frame的a标签历史记录前进一页
+
+  其他
+  pageDown：页面向下滚动一页
+  pageUp:页面向上滚动一页
+
+Apicloud前端框架:
+  包括api.js和api.css
+  api.css处理不同平台浏览器的默认样式，
+  api.js是APICloud为混合移动开发定制的轻量级js库，具有小巧高校的特性。
+  one(el,name,fn,useCapture):为dom元素绑定事件，时间只执行一次
+  dom(el,selector):选取首个匹配DOM元素
+  domALl(el,selector):选择所有匹配的dom元素
+  byId:通过id选择dom元素
+  first:选择dom元素的第一个元素
+  last：选择dom元素的最后一个子元素
+  eq():选择弟一个子元素
+  prev:选择相邻的前一个元素
+  next:选择相邻的下一个元素
+  contents:判断一个元素是否包含目标元素
+  closest：根据选择器匹配最近的父元素
+  remove:移除dom元素
+  attr:获取或设置dom元素的属性
+  removeAttr：移除dom元素的属性
+  hasCls：判断dom元素是否含某个className
+  addCls：为DOM元素增加className
+  removeCls:移除clasname
+  val():获取value值
+  prepend:在dom元素内部，首个子元素前插入html字符串
+  append：在dom元素内部，最后一个子元素前插入html字符串
+  before：在dom元素前插入HTML、字符串
+  after:在dom元素后面html字符串
+  html：设置html
+  text：获取元素的文本内容
+  offset:获取元素在页面中的位置与宽高
+  jsonToStr：将标准的json对象转换成字符串格式
+  strToJson：将json字符串转换成json对象
+  setStorage():存储数据
+  getStorage：过去存取的数据
+  reStorage():清除缓存的数据
+  clearStorage：清除所有缓存
+  fixIosBar:适配ios7+系统状态栏，
+  toast：延时提醒宽
+  get:api.ajax方法的get方式简写
+  post：post方式简写

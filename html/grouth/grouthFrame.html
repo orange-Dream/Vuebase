@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html >
+<!-- style="font-size:40px !important" -->
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/grouthFrame.css"/>
+    <style media="screen">
+    </style>
+</head>
+<body>
+    <div class="" id="grouthFrame">
+        <!-- 分类 -->
+        <div class="fenlei">
+            <div class="fenlei2" >
+              <div class="fenlei_img1">
+                <div class="zhuanzhuan_img">
+                  <img src="../../image/my/spread.png" alt="">
+                </div>
+                <div class="zhuanzhuan_name">
+                  转转学院
+                </div>
+              </div>
+              <div class="fenlei_bottom1">
+                  重庆一座既以江城、雾都著称，又以山城扬名的直辖市。城市依山而建
+              </div>
+            </div>
+            <div class="fenlei1" >
+                <div class="fenlei_img">
+                    <img src="../../image/my/strategy.png" alt="">
+                </div>
+                <div class="fenlei_bottom">
+                    新人必须
+                </div>
+            </div>
+        </div>
+        <div class="fenlei">
+            <div class="fenlei1" v-for="(item,index) in 6">
+                <div class="fenlei_img">
+                    <img src="../../image/my/strategy.png" alt="">
+                </div>
+                <div class="fenlei_bottom">
+                    宣传物料
+                </div>
+            </div>
+        </div>
+        <!-- 素材招商 -->
+        <div class="sucai"  v-for="item in 2">
+            <div class="sucai_top">
+              <div class="sucai_top_left">
+              招商素材
+              </div>
+              <div class="sucai_top_right">
+                15分钟前
+              </div>
+            </div>
+            <div class="sucai_content">
+              人生天地间，忽如远行客，一只蚂蚁第一次出门觅食，突然下起了雨，它不知道怎么回到蚁窝，这时遇见了另外一只蚂蚁，于是问：“你都如何回蚁窝？
+            </div>
+            <div class="sucai_img">
+              <img src="../../image/share/img-1.jpg" alt="">
+              <img src="../../image/share/img-2.jpg" alt="">
+              <img src="../../image/share/img-3.jpg" alt="">
+            </div>
+            <div class="sucai_last">
+              <div class="sucai_last_left">
+                  <i class="aui-iconfont aui-icon-comment"></i>&nbsp;&nbsp;复制文案
+              </div>
+              <div class="sucai_last_right">
+                <i class="aui-iconfont aui-icon-share"></i>&nbsp;&nbsp;一键转发
+              </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript" src="../../script/vue.js"></script>
+    <script type="text/javascript" src="../../script/vconsole.js"></script>
+    <script type="text/javascript">
+        apiready = function(){
+        var vconsole = new VConsole()
+        new Vue({
+                el: "#grouthFrame",
+                data: {
+                  grouths:[{
+                  }]
+                }
+            })
+            }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>成长</title>
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+    <style media="screen">
+        html{
+        }
+        header {
+            text-align: center;
+            line-height: 0.45rem;
+            font-size: 0.9rem;
+            width: 100vw;
+            color: #282828;
+            height: 2.2rem;
+            background: rgba(255, 255, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <header>成长</header>
+    <div class="" id="grouth">
+    </div>
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript" src="../../script/vue.js"></script>
+    <script type="text/javascript" src="../../script/vconsole.js"></script>
+    <script type="text/javascript">
+        apiready = function() {
+          console.log( api.pageParam.footerH);
+          new Vue({
+            el:"#grouth",
+            mounted(){
+            }
+          })
+            var header = $api.dom('header');
+            var headerH = $api.fixStatusBar(header);
+            api.openFrame({
+                // APICloud199621
+                name: 'grouthFrame',
+                url: 'grouthFrame.html',
+                bounces: true,
+                rect: { // 推荐使用Margin布局，用于适配屏幕的动态变化
+                    marginTop: headerH, // main页面距离win顶部的高度
+                    marginBottom: api.pageParam.footerH,
+                    x:0,
+                    w: 'auto',
+                },
+
+            });
+
+        }
+    </script>
+</body>
+
+</html>

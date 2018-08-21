@@ -1,0 +1,184 @@
+html {
+    background: #efeff4
+}
+
+#grouthFrame {
+    width: 100vw;
+    height: 100%;
+}
+
+.fenlei {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.fenlei1 {
+    margin-left: 1vw;
+    /*float: left;*/
+    width: 30vw !important;
+    height: 30vw;
+    margin-bottom: 0.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.5rem 1rem 0rem rgba(14, 5, 9, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.fenlei2 {
+    margin-left: 1vw;
+    float: left;
+    width: 61vw;
+    height: 30vw;
+    margin-bottom: 0.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.5rem 1rem 0rem rgba(14, 5, 9, 0.15);
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    overflow: hidden;
+    background: rgba(73, 157, 244, 1);
+    border-radius: 0.3rem;
+    box-shadow: 0 0.5rem 1rem 0rem rgba(14, 5, 9, 0.15);
+}
+
+.fenlei_img {
+    width: 33%;
+    height: 33%;
+    margin-bottom: 10%
+}
+
+.fenlei_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.fenlei_bottom {
+    width: 70%;
+    height: 15%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30%;
+    /*border-radius: 35%;*/
+    text-align: center;
+    line-height: 0.7rem;
+    font-size: 0.7rem;
+    font-family: PingFang-SC-Medium;
+    color: rgba(254, 254, 254, 1);
+    background: rgba(250, 81, 10, 1);
+}
+
+.zhuanzhuan_img img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.fenlei_img1 {
+    width: 60vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.7rem;
+    font-family: PingFang-SC-Medium;
+    padding: 0 0.5rem;
+}
+
+.zhuanzhuan_img {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zhuanzhuan_name {
+    margin-top: 0.2rem;
+    color: #fff;
+}
+
+.fenlei_bottom1 {
+    font-size: 0.7rem;
+    color: #fff;
+    padding: 1rem 0.5rem;
+}
+
+.sucai_top {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sucai_top_right {
+    font-size: 0.7rem;
+    font-family: PingFang-SC-Medium;
+    color: rgba(152, 152, 152, 1);
+    line-height: 0.45rem;
+}
+
+.sucai_top_left {
+    width: 4.38rem;
+    height: 1.45rem;
+    background: rgba(250, 81, 10, 1);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    justify-content: center;
+    font-family: PingFang-SC-Medium;
+    color: rgba(255, 255, 255, 1);
+    line-height: 0.45rem;
+    margin-bottom: 1rem;
+}
+
+.sucai {
+    width: 100vw;
+    padding: 1rem;
+    background: #fff;
+    margin-bottom: 0.5rem;
+}
+.sucai_content {
+    font-size: 0.7rem;
+    font-family: PingFang-SC-Medium;
+    color: rgba(40, 40, 40, 1);
+    line-height: 1rem;
+    margin-bottom: 1rem;
+}
+.sucai_img {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.sucai_img img {
+    width: 28vw;
+    height: 28vw;
+}
+.sucai_last {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 2rem;
+}
+.sucai_last_right {
+    font-size: 0.75rem;
+    font-family: PingFang-SC-Regular;
+    color: rgba(250, 81, 10, 1);
+    line-height: 0.45rem;
+}
+.sucai_last_left {
+    width: 40%;
+    border-right: 1px solid #c3c3c3;
+    font-size: 0.75rem;
+    font-family: PingFang-SC-Regular;
+    color: rgba(40, 40, 40, 1);
+    line-height: 0.45rem;
+}

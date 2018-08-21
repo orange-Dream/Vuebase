@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html >
+<!--  -style="font-size:40px  !important" -->
+<head>
+    <meta charset="utf-8">
+    <title>排行</title>
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/ranking.css" />
+</head>
+
+<body>
+    <div class="" id="rankingFrame">
+        <!-- 导航栏 -->
+        <div class="aui-tab tab">
+            <div class="aui-tab-item" v-for="(item, index) in tabs" @click="tothetabindex(index)">
+                <span v-text="item" :class="(thetabindex == index) ? 'tab-active':''"></span>
+            </div>
+        </div>
+        <!-- 前3名排名 -->
+        <div class="rank">
+            <div class="rank_num">
+                <div class="rank_num_img">
+                    <!-- <img src="../../image/rank/second.png"> -->
+                    <img src="../../image/rank/h-img-1.jpg" alt="">
+                </div>
+                <div class="rank_num_text">
+                    <div class="user-name">橘子</div>
+                    <div class="money">888.88</div>
+                </div>
+
+            </div>
+            <div class="rank_num">
+                <div class="rank_num_img1">
+                    <img src="../../image/rank/h-img-1.jpg" id="worder" alt="">
+                    <!-- <img src="../../image/rank/first.png"> -->
+                </div>
+                <div class="rank_num_text1">
+                    <div class="user-name1">橘子</div>
+                    <div class="money" style="color:#FA510A">888.88</div>
+                </div>
+            </div>
+            <div class="rank_num">
+                <div class="rank_num_img3">
+                    <!-- <img src="../../image/rank/third.png"> -->
+                    <img src="../../image/rank/h-img-1.jpg" alt="">
+
+                </div>
+                <div class="rank_num_text">
+                    <div class="user-name" style="font-size:0.9rem;">橘子</div>
+                    <div class="money" style="color:#FFAE00">888.88</div>
+                </div>
+
+            </div>
+        </div>
+        <!--  -->
+        <!--排行  -->
+        <div class="rank_paihang">
+            <div class="rank_info" v-for="(item,index) in ranks ">
+                <div class="rank_info_left">
+                    <div class="rank_id" v-text="item.id"></div>
+                    <div class="rank_img">
+                        <img :src=item.img alt="">
+                    </div>
+                    <div class="rank_name" v-text="item.name"></div>
+                </div>
+                <div class="rank_money" v-text="item.money">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript" src="../../script/vue.js"></script>
+    <script type="text/javascript" src="../../script/vconsole.js"></script>
+    <script type="text/javascript" src="../../script/ranking.js"></script>
+</body>
+
+</html>

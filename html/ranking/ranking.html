@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>排行</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+    <style media="screen">
+    html{
+    }
+    body{
+      /*border:1px solid blue;
+      background: pink*/
+    }
+    header {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.9rem;
+      width: 100vw;
+      color: #282828;
+      height: 2.2rem;
+      background: rgba(255, 255, 255, 1);
+    }
+    /*#ranking{
+      height: 100vh
+    }*/
+    </style>
+  </head>
+  <body>
+    <header>排行</header>
+    <div class="" id ="ranking">
+    </div>
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript" src="../../script/vue.js"></script>
+    <script type="text/javascript" src="../../script/vconsole.js"></script>
+    <script src="../../script/vconsole.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    apiready =function(){
+      var vconole =new VConsole()
+      var headerH = $api.offset( $api.dom('header')).h;
+      var mainH = $api.offset( $api.dom('#ranking')).h;
+
+      console.log(headerH);
+      console.log(mainH);
+
+    console.log(this);
+      new Vue({
+        el:"#ranking",
+        data:{
+        },
+        mounted(){
+          api.openFrame({
+              name: "rankingFrame",
+              url:"rankingFrame.html",
+              rect: {
+                  x: 0,
+                  // y: headerH,
+                  w: 'auto',
+                  // h: mainH-api.pageParam.footerH,
+                  marginTop:headerH,
+                  marginBottom: api.pageParam.footerH,
+              },
+              pageParam:{
+              }
+            })
+        }
+      })
+    }
+    </script>
+  </body>
+</html>

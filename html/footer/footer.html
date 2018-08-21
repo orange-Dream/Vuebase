@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>底部导航栏</title>
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+    <style media="screen">
+        .aui-active {
+            color: #fa6112 !important;
+        }
+        .main {
+            width: 100vw
+        }
+        .tabar_img{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .tabar_img img{
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" id="main" style="height:100%">
+    </div>
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item" :class="(theindex == index) ?'aui-active':''" @click="tomodukle(index,item.url)" v-for="(item,index) in   tabbar" tapmode>
+            <div class="tabar_img" v-if="theindex != index">
+                <img :src="item.image" alt="">
+            </div>
+            <div class="tabar_img" v-else>
+              <img :src=item.imageActive  alt="">
+            </div>
+            <div class="aui-bar-tab-label">{{item.name}}</div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript" src="../../script/vue.js"></script>
+    <script type="text/javascript" src="../../script/vconsole.js"></script>
+    <script type="text/javascript">
+        apiready = function() {
+            var footer = $api.dom("footer");
+            var footerH = $api.fixTabBar(footer);
+            var offset = $api.offset($api.dom("footer"));
+            var height = offset.h;
+            var main = $api.offset($api.dom("#main"));
+            var main_height = main.h;
+            console.log(main_height);
+            console.log(height);
+            new Vue({
+                    el: "#footer",
+                    data: {
+                        tabbar: [{
+                            name: "首页",
+                            url: "../home/home.html",
+                            image: "../../image/footer/home_gray.png",
+                            imageActive: "../../image/footer/home.png",
+
+                        }, {
+                            name: "成长",
+                            url: "../grouth/grouth.html",
+                            image: "../../image/footer/discover_gray.png",
+                            imageActive: "../../image/footer/discover.png",
+                        }, {
+                            name: "排行",
+                            url: "../ranking/ranking.html",
+                            image: "../../image/footer/rank_gray.png",
+                            imageActive: "../../image/footer/rank.png",
+                        }, {
+                            name: "我的",
+                            url: "../my/my.html",
+                            image: "../../image/footer/my_gray.png",
+                            imageActive: "../../image/footer/my.png",
+                        }],
+                        theindex: 0,
+                    },
+                    mounted() {
+                        api.openFrameGroup({
+                          name: "tabars",
+                          preload: 0,
+                          rect: {
+                              x: 0,
+                              y: 0,
+                              w: 'auto',
+                              // h: main_height - height
+                              marginBottom:height
+                          },
+                          frames: [
+                            {
+                                name: "home",
+                                url: "../home/home.html",
+                                bgColor: '#fff',
+                                pageParam: {
+                                    footerH: height
+                                },
+                            },{
+                                  name: "grouth",
+                                  url: '../grouth/grouth.html',
+                                  bgColor: '#fff',
+                                  pageParam: {
+                                      footerH: height
+                                  }
+                              },
+                              {
+                                  name: "ranking",
+                                  url: "../ranking/ranking.html",
+                                  bgColor: '#fff',
+                                  pageParam: {
+                                      footerH: height
+                                  }
+                              },
+                              {
+                                 name: "my",
+                                 url: "../my/my.html",
+                                 bgColor: '#fff',
+                                 pageParam: {
+                                     footerH: height
+                                 },
+                             }
+                            ],
+                            },
+                            function(ret, err) {
+                                console.log(ret.index);
+                            })
+                },
+                methods: {
+                    tomodukle(index, url) {
+                        this.theindex = index
+                        console.log(url);
+                        api.openFrame({
+                            name: name,
+                            url: url,
+                            rect: {
+                                x: 0,
+                                y: 0,
+                                w: 'auto',
+                                // h: main_height - height
+                                marginBottom:height
+
+                                    // marginBottom: footerH,
+                            },
+                            pageParam: {
+                                footerH: height
+                            },
+                            animation: {
+                                type: "flip",
+                                duration: 300 //动画类型（详见动画类型常量）
+                            },
+                        });
+                        // api.openDrawerPane({
+                        //     type: 'left'
+                        // });
+
+                    }
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

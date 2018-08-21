@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html  >
+<!-- style="font-size:40px !important " -->
+
+<head>
+    <meta charset="utf-8">
+    <title>我的</title>
+        <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/my.css" />
+</head>
+
+<body>
+    <div class="" id="my">
+        <!-- 个人信息 -->
+        <div class="userinfo">
+            <div class="userinfo_left">
+                <!-- <img src="../../image/head-img.jpg" alt=""> -->
+                <img src="../../image/home/tourism.png" alt="">
+            </div>
+            <div class="userinfo_right">
+                <div class="userinfo_top">
+                    <span class="userinfo_top_span1">本地通传媒</span>
+                    <!-- <span class="userinfo_top_span2">合伙人</span> -->
+                </div>
+                <div class="userinfo_last">
+                    <span class="userinfo_top_span3">我的邀请码：FGHUGHJG1</span> <span class="userinfo_top_span4">复制</span>
+                </div>
+            </div>
+            <!--  -->
+        </div>
+        <!-- 余额 -->
+        <div class="mymoney">
+            <div class="left">
+                <div class="left_top">
+                    我的余额
+                </div>
+                <div class="left_last">
+                    3988.00 &nbsp;&nbsp; <button type="button" name="button">复制</button>
+                </div>
+            </div>
+            <div class="right">
+                <i class="aui-iconfont aui-icon-right"></i>
+            </div>
+            <!--  -->
+        </div>
+        <!-- 我的团队 -->
+        <div class="myteam">
+            <div class="myteam_top">
+                <div class="myteam_top_left">
+                    <span>我的团队</span>
+                </div>
+                <div class="myteam_top_right">
+                    团队规模： <span>100</span>
+                </div>
+            </div>
+            <div class="myteam_last">
+                <div class="aui-grid" style="padding:0 !important">
+                    <div class="aui-col-xs-6">
+                        <div class="team_money">
+                            1056.00
+                        </div>
+                        <div class="">
+                            团队收益(元)
+                        </div>
+                    </div>
+                    <div class="aui-col-xs-6">
+                        <div class="yugu_money">
+                            22.22
+                        </div>
+                        <div class="">
+                            预估收益(元)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="indo" style="margin-bottom:0.5rem">
+            <div class="aui-grid" id="aui-grid1">
+                <div class="aui-row">
+                    <div class="aui-col-xs-3" v-for="(item,index) in info1">
+                        <div class="item_img">
+                            <img :src="item.img" alt="">
+                        </div>
+                        <div class="aui-grid-label">{{item.name}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--   -->
+        <div class="indo">
+            <div class="aui-grid" id="aui-grid1">
+                <div class="aui-row">
+                    <div class="aui-col-xs-3" v-for="(item,index) in info">
+                        <div class="item_img">
+                            <img :src="item.img" alt="">
+                        </div>
+                        <div class="aui-grid-label">{{item.name}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript" src="../../script/vconsole.js"></script>
+    <script type="text/javascript" src="../../script/aui-slide.js"></script>
+    <script type="text/javascript" src="../../script/vue.js"></script>
+    <script type="text/javascript">
+        apiready = function() {
+        new Vue({
+                el: "#my",
+                data: {
+                    info1: [{
+                        name: "我的团队",
+                        img: "../../image/my/team.png"
+                    }, {
+                        name: "收益明细",
+                        img: "../../image/my/income.png"
+                    }, {
+                        name: "我的团队",
+                        img: "../../image/my/invite.png"
+                    }],
+                    info: [{
+                        name: "我的收藏",
+                        img: "../../image/my/favorite.png"
+                    }, {
+                        name: "联系客服",
+                        img: "../../image/my/contact.png"
+                    }, {
+                        name: "新手攻略",
+                        img: "../../image/my/strategy.png"
+                    }, {
+                        name: "常见问题",
+                        img: "../../image/my/question.png"
+                    }, {
+                        name: "我的广告",
+                        img: "../../image/my/myad.png"
+                    }, {
+                        name: "推广订单",
+                        img: "../../image/my/spread.png"
+                    }, {
+                        name: "提现密码",
+                        img: "../../image/my/setpass.png"
+                    }],
+                },
+                mounted() {
+                    console.log("start my");
+                }
+            })
+            }
+    </script>
