@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/home.css" />
+</head>
+
+<body>
+    <div class="" id="home">
+        <!-- 轮播图 -->
+        <!--  statusqqq -->
+
+        <div class="">
+            <div id="aui-slide3">
+                <div class="aui-slide-wrap">
+                    <div class="aui-slide-node bg-dark">
+                        <img src="../../image/footer/banner.jpg" />
+                    </div>
+                    <div class="aui-slide-node bg-dark">
+                        <img src="../../image/footer/banner1.jpg" />
+                    </div>
+                    <div class="aui-slide-node bg-dark">
+                        <img src="../../image/footer/banner2.jpg" />
+                    </div>
+                </div>
+                <div class="aui-slide-page-wrap">
+                    <!--分页容器-->
+                </div>
+            </div>
+        </div>
+        <!-- 分享赚、旅游赚、购物赚、同城装4大模块分类 -->
+        <div class="fenlei">
+            <div class="fenlei_details" v-for="(item,index) in fenlei">
+                <div class="fenlei_details_left">
+                    <img :src="item.img" alt="">
+                </div>
+                <div class="fenlei_details_right">
+                    <div class="top">
+                        {{item.name}}
+                    </div>
+                    <div class="last">
+                        邀请好友 邀请好友
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 邀请赚和拼团赚 -->
+        <div class="yaoqingzhuang" @click="getpivturedemo">
+            <div class="" style="color:#0D59C0;;font-size:0.9rem">
+                邀请赚
+            </div>
+            <div class="" style="color:#fff;font-size:0.6rem">
+                邀请转转客，一起转发赚钱
+            </div>
+        </div>
+        <div class="yaoqingzhuang1" @click="actionsheetdemo">
+            <div class="" style="color:#A42609;font-size:0.9rem">
+                拼团赚
+            </div>
+            <div class="" style="color:#fff;font-size:0.6rem">
+                在线拼团邀请，轻松赚钱高收益
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript" src="../../script/vue.js"></script>
+    <script type="text/javascript" src="../../script/vconsole.js"></script>
+    <script type="text/javascript" src="../../script/aui-slide.js"></script>
+    <script type="text/javascript" src="../../script/home.js"></script>
+</body>
+
+</html>
